@@ -1,50 +1,454 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
     <title>Systementor Zoo</title>
   </head>
+
   <body>
-    <div class="container">
-      <header>
-        <span><a href="./animals.html" target="_blank">Våra djur</a></span>
-        <span><a href="./news.html" target="_blank">Nyhetsbrev</a></span>
-      </header>
-      <main>
-        <section class="hero">
-          <img src="./images/zoo-main.jpg" alt="Zoo Image" />
-          <div class="tag-container">
-            <div class="tag tag-main">Systementor Zoo</div>
-            <div class="tag tag-second">Öppet från maj 1 till september 31</div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <section class="hamburger-section">
+      <label for="menu-toggle" class="hamburger-menu">
+        <img src="./images/icons/hamburger_dark.svg" alt="Open menu" />
+      </label>
+    </section>
+
+    <header>
+      <div class="centralize header-container">
+        <div class="logo">
+          <img src="./images/icons/logo_gold.svg" alt="Systementor Zoo" />
+          <span class="logo-text"
+            >Systementor<span class="logo-badge">zoo</span></span
+          >
+        </div>
+
+        <nav aria-label="Main navigation">
+          <a href="#animals">Our animals</a>
+          <a href="#restaurant">Restaurant</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#activities">Things to do</a>
+          <a href="#find-us">Find us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="centralize hero-section">
+        <h1>
+          <span class="first-line"
+            >The <span class="color-change">most boring zoo</span>
+          </span>
+
+          <span class="second-line">
+            <img src="./images/animals/02_sloth.jpg" alt="Sloth" />
+            you will ever visit.
+          </span>
+        </h1>
+      </section>
+
+      <section class="animal-section">
+        <h2 class="centralize animal-header">Animals</h2>
+
+        <div class="centralize animal-container">
+          <article class="animal-card">
+            <img src="./images/animals/01_koala.jpg" alt="Koala" />
+            <h3>Koalas</h3>
+            <p>Sleeping is a full-time job.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/02_sloth.jpg" alt="Sloth" />
+            <h3>Sloths</h3>
+            <p>Moving is optional.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/03_panda.jpg" alt="Panda" />
+            <h3>Pandas</h3>
+            <p>Take a nap.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/04_lion.jpg" alt="Lion" />
+            <h3>Lions</h3>
+            <p>The king of doing absolutely nothing.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/05_elephant.jpg" alt="Elephant" />
+            <h3>Elephants</h3>
+            <p>Big and very relaxed.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/06_giraffe.jpg" alt="Giraffe" />
+            <h3>Giraffes</h3>
+            <p>Just hanging around.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/07_hippo.jpg" alt="Hippopotamus" />
+            <h3>Hippos</h3>
+            <p>Water, mud and absolutely no plans.</p>
+          </article>
+
+          <article class="animal-card">
+            <img src="./images/animals/08_red_panda.jpg" alt="Red panda" />
+            <h3>Red Pandas</h3>
+            <p>Taking a break.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="newsletter" class="newsletter-section">
+        <div class="centralize newsletter-container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Enter your details to receive information and news</p>
+
+          <form
+            class="newsletter-form"
+            action="https://postman-echo.com/post"
+            method="post"
+          >
+            <div class="form-field">
+              <label for="firstname">First name</label>
+              <input
+                id="firstname"
+                name="firstname"
+                type="text"
+                required
+                autocomplete="first-name"
+              />
+            </div>
+            <div class="form-field">
+              <label for="lastname">Last name</label>
+              <input
+                id="lastname"
+                name="lastname"
+                type="text"
+                required
+                autocomplete="last-name"
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form-field">
+              <label for="age">Age</label>
+              <input
+                id="age"
+                name="age"
+                type="number"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+            <button class="form-button" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="activities" class="activity-section">
+        <h2 class="activity-header">Things to do</h2>
+
+        <div class="centralize activity-container">
+          <article class="activity-card">
+            <img src="./images/icons/coffee.svg" alt="Coffee" />
+            <h3>Have a coffee</h3>
+            <p>Watch the animals while you enjoy a quiet cup of coffee.</p>
+          </article>
+
+          <article class="activity-card">
+            <img src="./images/icons/tired-person.svg" alt="Tired person" />
+            <h3>Do absolutely nothing</h3>
+            <p>Take a seat and experience the zoo.</p>
+          </article>
+
+          <article class="activity-card">
+            <img src="./images/icons/hugging_dark.svg" alt="Hugging" />
+            <h3>Wake up a sleeping animal</h3>
+            <p>All of our animals are available for cuddles.</p>
+          </article>
+
+          <article class="activity-card">
+            <img src="./images/icons/playground_dark.svg" alt="Playground" />
+            <h3>Use the playground</h3>
+            <p>For children who find watching animals sleep too exciting.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="animals" class="animal-table-section">
+        <div class="centralize animal-table-container">
+          <h2>More animals</h2>
+
+          <table class="animal-table">
+            <colgroup>
+              <col class="name-column" />
+              <col class="species-column" />
+              <col class="weight-column" />
+              <col class="wikipedia-column" />
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Weight</th>
+                <th>Wikipedia</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Meerkats</td>
+                <td>
+                  <img src="./images/animals/09_meerkat.jpg" alt="Meerkat" />
+                </td>
+                <td>0.7 kg</td>
+                <td>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Meerkat"
+                    target="_blank"
+                  >
+                    Info
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Capybaras</td>
+                <td>
+                  <img src="./images/animals/10_capybara.jpg" alt="Capybara" />
+                </td>
+                <td>50 kg</td>
+                <td>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Capybara"
+                    target="_blank"
+                  >
+                    Info
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Penguins</td>
+                <td>
+                  <img src="./images/animals/11_penguin.jpg" alt="Penguin" />
+                </td>
+                <td>15 kg</td>
+                <td>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Penguin"
+                    target="_blank"
+                  >
+                    Info
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Otters</td>
+                <td>
+                  <img src="./images/animals/12_otter.jpg" alt="Otter" />
+                </td>
+                <td>10 kg</td>
+                <td>
+                  <a href="https://en.wikipedia.org/wiki/Otter" target="_blank">
+                    Info
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Flamingos</td>
+                <td>
+                  <img src="./images/animals/13_flamingo.jpg" alt="Flamingo" />
+                </td>
+                <td>3 kg</td>
+                <td>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Flamingo"
+                    target="_blank"
+                  >
+                    Info
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Tortoises</td>
+                <td>
+                  <img src="./images/animals/14_tortoise.jpg" alt="Tortoise" />
+                </td>
+                <td>100 kg</td>
+                <td>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Tortoise"
+                    target="_blank"
+                  >
+                    Info
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="restaurant" class="more-activities-section">
+        <div class="more-activities-container">
+          <h2>There are even more things to do!</h2>
+
+          <article class="more-activity-item">
+            <h3>Playground for the kids</h3>
+
+            <div class="more-activity-info">
+              <p>
+                Tincidunt nam porta elementum a enim euismod quam. Iaculis massa
+                nisl malesuada lacinia integer nunc posuere. Velit aliquam
+                imperdiet mollis nullam volutpat porttitor ullamcorper. Taciti
+                sociosqu ad litora torquent per conubia nostra. Primis vulputate
+                ornare sagittis vehicula praesent dui felis. Maximus eget
+                fermentum odio phasellus non purus est. Platea dictumst lorem
+                ipsum dolor sit amet consectetur. Dictum risus blandit quis
+                suspendisse aliquet nisi sodales. Vitae pellentesque sem
+                placerat in id cursus mi. Luctus nibh finibus facilisis dapibus
+                etiam interdum tortor. Eu aenean sed diam urna tempor pulvinar
+                vivamus. Tincidunt nam porta elementum a enim euismod quam.
+                Iaculis massa nisl malesuada lacinia integer nunc posuere. Velit
+                aliquam imperdiet mollis nullam volutpat porttitor ullamcorper.
+                Taciti sociosqu ad litora torquent per conubia nostra. Primis
+                vulputate ornare sagittis vehicula praesent dui felis. Et magnis
+                dis parturient montes nascetur ridiculus mus. Accumsan maecenas
+                potenti ultricies habitant morbi senectus netus. Mattis
+                scelerisque maximus eget fermentum odio phasellus non. Hac
+                habitasse platea dictumst lorem ipsum dolor sit. Vestibulum
+                fusce dictum risus blandit quis suspendisse aliquet. Ex sapien
+                vitae pellentesque sem placerat in id. Neque at luctus nibh
+                finibus facilisis dapibus etiam. Tempus leo eu aenean sed diam
+                urna tempor.
+              </p>
+
+              <p>
+                Et magnis dis parturient montes nascetur ridiculus mus. Accumsan
+                maecenas potenti ultricies habitant morbi senectus netus. Mattis
+                scelerisque maximus eget fermentum odio phasellus non. Hac
+                habitasse platea dictumst lorem ipsum dolor sit. Vestibulum
+                fusce dictum risus blandit quis suspendisse aliquet. Ex sapien
+                vitae pellentesque sem placerat in id. Neque at luctus nibh
+                finibus facilisis dapibus etiam. Tempus leo eu aenean sed diam
+                urna tempor. Viverra ac tincidunt nam porta elementum a enim.
+              </p>
+            </div>
+          </article>
+
+          <article class="more-activity-item">
+            <h3>Restaurants</h3>
+
+            <div class="more-activity-info">
+              <p>
+                Bibendum egestas iaculis massa nisl malesuada lacinia integer.
+                Arcu dignissim velit aliquam imperdiet mollis nullam volutpat.
+                Class aptent taciti sociosqu ad litora torquent per. Turpis
+                fames primis vulputate ornare sagittis vehicula praesent.
+                Natoque penatibus et magnis dis parturient montes nascetur.
+                Feugiat tristique accumsan maecenas potenti ultricies habitant
+                morbi. Nulla molestie mattis scelerisque maximus eget fermentum
+                odio. Cubilia curae hac habitasse platea dictumst lorem ipsum.
+                Mauris pharetra vestibulum fusce dictum risus blandit quis.
+                Quisque faucibus ex sapien vitae pellentesque sem placerat.
+                Vitae pellentesque sem placerat in id cursus mi. Luctus nibh
+                finibus facilisis dapibus etiam interdum tortor. Eu aenean sed
+                diam urna tempor pulvinar vivamus. Tincidunt nam porta elementum
+                a enim euismod quam. Iaculis massa nisl malesuada lacinia
+                integer nunc posuere. Velit aliquam imperdiet mollis nullam
+                volutpat porttitor ullamcorper. Taciti sociosqu ad litora
+                torquent per conubia nostra.
+              </p>
+            </div>
+          </article>
+
+          <article class="more-activity-item">
+            <h3>All our amazing animals</h3>
+
+            <div class="more-activity-info">
+              <p>
+                Ante condimentum neque at luctus nibh finibus facilisis. Duis
+                convallis tempus leo eu aenean sed diam. Sollicitudin erat
+                viverra ac tincidunt nam porta elementum. Nec metus bibendum
+                egestas iaculis massa nisl malesuada. Commodo augue arcu
+                dignissim velit aliquam imperdiet mollis. Semper vel class
+                aptent taciti sociosqu ad litora. Cras eleifend turpis fames
+                primis vulputate ornare sagittis. Orci varius natoque penatibus
+                et magnis dis parturient. Proin libero feugiat tristique
+                accumsan maecenas potenti ultricies.
+              </p>
+
+              <p>
+                Primis vulputate ornare sagittis vehicula praesent dui felis. Et
+                magnis dis parturient montes nascetur ridiculus mus. Accumsan
+                maecenas potenti ultricies habitant morbi senectus netus. Mattis
+                scelerisque maximus eget fermentum odio phasellus non. Hac
+                habitasse platea dictumst lorem ipsum dolor sit. Vestibulum
+                fusce dictum risus blandit quis suspendisse aliquet. Ex sapien
+                vitae pellentesque sem placerat in id. Neque at luctus nibh
+                finibus facilisis dapibus etiam. Tempus leo eu aenean sed diam
+                urna tempor. Viverra ac tincidunt nam porta elementum a enim.
+              </p>
+
+              <p>
+                Ante condimentum neque at luctus nibh finibus facilisis. Duis
+                convallis tempus leo eu aenean sed diam. Sollicitudin erat
+                viverra ac tincidunt nam porta elementum. Nec metus bibendum
+                egestas iaculis massa nisl malesuada. Commodo augue arcu
+                dignissim velit aliquam imperdiet mollis. Semper vel class
+                aptent taciti sociosqu ad litora. Cras eleifend turpis fames
+                primis vulputate ornare sagittis. Orci varius natoque penatibus
+                et magnis dis parturient. Proin libero feugiat tristique
+                accumsan maecenas potenti ultricies. Eros lobortis nulla
+                molestie mattis scelerisque maximus eget. Curabitur facilisi
+                cubilia curae hac habitasse platea dictumst. Efficitur laoreet
+                mauris pharetra vestibulum fusce dictum risus. Adipiscing elit
+                quisque faucibus ex sapien vitae pellentesque. Consequat magna
+                ante condimentum neque at luctus nibh.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="find-us" class="location-section">
+        <div class="centralize location-container">
+          <h2>Find Us</h2>
+          <h3>Systementor Zoo</h3>
+          <p>Stockholm, Sverige</p>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=Kolm%C3%A5rdens%20djurpark%2C%20618%2092%20Kolm%C3%A5rden&output=embed"
+              title="Google Maps - Kolmårdens djurpark"
+              loading="lazy"
+            ></iframe>
           </div>
-        </section>
-      </main>
-      <footer>
-        <section>
-          <span>
-            <img src="./images/wifi.svg" alt="WiFi" />
-          </span>
-          <h2>Gratis Wifi!</h2>
-          <p>blabla blabla bla, blablabla blabla. bla bla bla, blabla.</p>
-        </section>
-        <section>
-          <span>
-            <img src="./images/eat.svg" alt="Restaurang" />
-          </span>
-          <h2>Ett flertal restauranger</h2>
-          <p>blabla blabla bla, blablabla blabla. bla bla bla, blabla.</p>
-        </section>
-        <section>
-          <span>
-            <img src="./images/tent.svg" alt="Camping" />
-          </span>
-          <h2>Övernatta i vår trevliga camping</h2>
-          <p>blabla blabla bla, blablabla blabla. bla bla bla, blabla.</p>
-        </section>
-      </footer>
-    </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Per Söderberg - Systementor Zoo</p>
+    </footer>
   </body>
 </html>
